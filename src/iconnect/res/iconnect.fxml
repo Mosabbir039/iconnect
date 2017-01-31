@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="709.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iconnect.IConnect">
+   <children>
+      <Text fill="#f2f0f0" fontSmoothingType="LCD" layoutX="265.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remote Control">
+         <font>
+            <Font name="Calibri Italic" size="27.0" />
+         </font>
+      </Text>
+      <Button layoutX="35.0" layoutY="69.0" mnemonicParsing="false" styleClass="button1" text="Connections" textFill="#111010" />
+      <Button layoutX="162.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="button1" text="Extra" />
+      <Button layoutX="296.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="button1" text="Help" />
+      <TabPane layoutX="13.0" layoutY="124.0" prefHeight="455.0" prefWidth="667.0" styleClass="pane" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Remote Control">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="root">
+                     <children>
+                        <Pane layoutY="-5.0" prefHeight="431.0" prefWidth="331.0" styleClass="pane">
+                           <children>
+                              <Text fill="#f8f4f4" fontSmoothingType="LCD" layoutX="32.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allow remote control">
+                                 <font>
+                                    <Font name="Calibri Italic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fcf7f7" layoutX="42.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="please tell your patner the following Id and password if you like to allow remote control" wrappingWidth="251.90234375">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#f8f4f4" fontSmoothingType="LCD" layoutX="24.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your password:">
+                                 <font>
+                                    <Font name="Calibri Italic" size="17.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#f8f4f4" fontSmoothingType="LCD" layoutX="23.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your ID:">
+                                 <font>
+                                    <Font name="Calibri Italic" size="17.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="localip" layoutX="94.0" layoutY="170.0" />
+                              <TextField fx:id="password" layoutX="145.0" layoutY="202.0" />
+                              <Button layoutX="24.0" layoutY="265.0" mnemonicParsing="false" onAction="#onRefreshClick" text="Refresh" />
+                              <Circle fx:id="statusCircle" fill="DODGERBLUE" layoutX="42.0" layoutY="371.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Text fx:id="status" layoutX="66.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+                              <RadioButton layoutX="256.0" layoutY="290.0" mnemonicParsing="false" selected="true" text="On" />
+                              <RadioButton layoutX="256.0" layoutY="317.0" mnemonicParsing="false" text="Off" />
+                              <Label layoutX="161.0" layoutY="290.0" text="Allow control is" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="335.0" layoutY="-10.0" prefHeight="438.0" prefWidth="341.0" styleClass="pane" stylesheets="@iconnect.css">
+                           <children>
+                              <Text fill="#fcf7f7" layoutX="15.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="please enter your patner ID in order to control remote computer" wrappingWidth="251.90234375">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#f8f4f4" fontSmoothingType="LCD" layoutX="25.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Control remote computer">
+                                 <font>
+                                    <Font name="Calibri Italic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#f8f4f4" fontSmoothingType="LCD" layoutX="25.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patner ID:">
+                                 <font>
+                                    <Font name="Calibri Italic" size="17.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="remoteip" layoutX="103.0" layoutY="140.0" />
+                              <RadioButton layoutX="97.0" layoutY="211.0" mnemonicParsing="false" text="Remote Control" />
+                              <RadioButton layoutX="97.0" layoutY="239.0" mnemonicParsing="false" text="File Transfer" />
+                              <Button layoutX="97.0" layoutY="283.0" mnemonicParsing="false" onAction="#onConnectClick" text="Connect" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Meetings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <stylesheets>
+       	<URL value="@iconnect.css" />
+   </stylesheets>	
+</AnchorPane>
