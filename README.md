@@ -10,6 +10,7 @@ Course: Network Programming Lab
 
 ### Technologies Used
 - Java
+- Java FX
 - Eclipse
 - OpenCV (Tried to manipulate the captured image to reduce the frame size for faster transmission)
 - Core Java Socket programming ( TCP / IP was used instead of UDP since I wanted to have a reliable secure connection)
