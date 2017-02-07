@@ -4,13 +4,16 @@ I uploaded the code as it is submitted. So the code may not be upto the industry
 
 ````
 Year coded: 2015
-Semester : 4th year
+Semester : 4th year 2nd semester
+Course: Network Programming Lab
 `````
 
 ### Technologies Used
+- Java
 - Eclipse
 - OpenCV (Tried to manipulate the captured image to reduce the frame size for faster transmission)
 - Core Java Socket programming ( TCP / IP was used instead of UDP since I wanted to have a reliable secure connection)
+- Hulfman Algorithm (Due to limited time at the end it was not used) 
 
 
 ### How to Use
@@ -22,7 +25,7 @@ Semester : 4th year
 
 ### Troubleshoot
 
-- Make sure the remote pc is accessible via your computer.
+- Make sure the remote pc is accessible via your computer. You can check it by executing "ping `IpAddressToCheck`" from the command line.
 - If you have trouble connecting, disconnect the internet from the router / mobile hotspot, 
 connect your pc and the partner pc to the same router.
 - If you are connected to the internet, the IP address shown in IConnect will not be always the desired ip address as a 
